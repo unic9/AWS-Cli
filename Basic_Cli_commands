@@ -1,3 +1,11 @@
+#Aws cli (https://docs.aws.amazon.com/cli/latest/reference/index.html#cli-aws) AWS documentation
+
+Aws s3
+
+
+- aws s3 ls
+  aws s3 ls s3://my-first-backup-bucket (#gives files list in the s3 bucket)
+
 #To crreate a s3 bucket from cli to aws
 
 aws s3 mb s3://my-first-backup-bucket
@@ -5,3 +13,23 @@ aws s3 mb s3://my-first-backup-bucket
 #To upload a file
 
 aws s3 cp "/Users/kiransmac/Downloads/AWS-SA/Labs/LAB-01/mywebsite/index.html" s3://mysecond-bucket/
+
+#To upload multiple files to bucket
+
+aws s3 cp "/Users/kiransmac/Downloads/AWS-SA/Labs/LAB-01/mywebsite/" s3://mysecond-bucket --recursive
+
+#To download files from bucket
+
+aws s3 cp s3://mysecond-bucket/index.html ./  (# u can try --recursive for multiple files) 
+
+#To Delete Multiple files from bucket through Cli
+
+aws s3 rm s3://mysecond-bucket/ --recursive
+
+#to remove bucket 
+
+aws s3 rb s3://mysecond-bucket
+
+
+
+
