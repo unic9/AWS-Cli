@@ -1,0 +1,7 @@
+#To crreate a s3 bucket from cli to aws
+
+aws s3 mb s3://my-first-backup-bucket
+
+#To upload a file
+
+aws s3 cp "/Users/kiransmac/Downloads/AWS-SA/Labs/LAB-01/mywebsite/index.html" s3://mysecond-bucket/
